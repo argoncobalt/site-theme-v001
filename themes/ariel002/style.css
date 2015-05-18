@@ -419,6 +419,7 @@ a:active {
     color: #BA6D82; 
     text-decoration: none; 
     transition: background 0.3s ease 0s, color 0.3s ease 0s; 
+    cursor: pointer;
 }
 
 a:hover { 
@@ -691,7 +692,7 @@ header.sticky .double-rule {
 -------------------------------------------------------------- */
 
 #main_cont { 
-    padding-top: 50px; 
+    padding-top: 30px; 
 }
 
 .logo_cont { 
@@ -740,12 +741,16 @@ header.sticky .double-rule {
 
 h1.single_title { 
     margin-top: 0; 
-    margin-bottom: 50px; 
-    font-weight: normal; 
+}
+
+h1 {
     font-family: 'reflexbold';
     font-size: 36px;
+    font-weight: normal; 
     text-align: center;
     color: #5C3E6C;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .single_inside_content p { line-height: 22px; margin-bottom: 15px; }
@@ -1038,14 +1043,24 @@ img#gear8 {
 /* PROJECTS
 -------------------------------------------------------------- */
 
-.thumb {
+.thumb-container {
     width: 320px;
+    height: 320px;
     display: inline-block;
-    margin-right: 5px;
+    margin: 5px;
+    position: relative;
+    border: 1px solid rgba(167, 150, 178, 0.5);
 }
 
-.thumb:nth-child(3n) {
-    margin-left: 0;
+.thumb {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.projects-section-container {
+    width: 1006px;
+    margin: 0 auto;
 }
 
 /* ABOUT PAGE
@@ -1125,3 +1140,63 @@ article + [data-readmore-toggle], article[data-readmore] {
     top: -170px; 
     visibility: hidden;
 }
+
+/* PROJECTS PAGE
+-------------------------------------------------------------- */
+
+.projects-button {
+    background: url('images/portfolio-icons.svg') no-repeat;
+    float: left;
+    width: 142px;
+    text-align: center;
+    height: 180px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    transition: none;
+}
+
+.projects-button p {
+    width: 142px;
+    margin-top: -10px;
+}
+
+.projects-button:first-child,
+.projects-button:nth-child(6) {
+    margin-left: 0px;
+}
+
+#projects-nav {
+    height: 300px;
+    width: 840px;
+    margin: 0 auto;
+}
+
+#silkscreen-button { background-position:-7.489px -3.919px; }
+#silkscreen-button:hover { background-position:-7.415px -415.869px; }
+
+#drawing-button { background-position:-179.569px -213.762px; }
+#drawing-button:hover { background-position:-179.495px -623.19px; }
+
+#pcomp-button { background-position:-701.6px -6.291px; }
+#pcomp-button:hover { background-position:-701.525px -418.241px; }
+
+#visual-button { background-position:-528.34px -5.958px; }
+#visual-button:hover { background-position:-528.266px -417.908px; }
+
+#ui-ux-button { background-position:-6.767px -212.057px; }
+#ui-ux-button:hover { background-position:-6.693px -621.486px; }
+
+#industrial-button { background-position:-529.586px -214.086px; }
+#industrial-button:hover { background-position:-529.512px -623.524px; }
+
+#mobile-button { background-position:-353.552px -5.950px; }
+#mobile-button:hover { background-position:-353.478px -417.908px; }
+
+#painting-button { background-position:-180.291px -5.623px; }
+#painting-button:hover { background-position:-180.216px -417.573px; }
+
+#sketchbooks-button { background-position:-352.83px -214.096px; }
+#sketchbooks-button:hover { background-position:-352.755px -623.524px; }
+
+#craft-button { background-position:-702.847px -214.096px; }
+#craft-button:hover { background-position:-702.773px -623.524px; }
