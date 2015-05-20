@@ -1040,29 +1040,6 @@ img#gear8 {
 
 #splash-about:hover { background-position:-613px -319.5px; }
 
-/* PROJECTS
--------------------------------------------------------------- */
-
-.thumb-container {
-    width: 320px;
-    height: 320px;
-    display: inline-block;
-    margin: 5px;
-    position: relative;
-    border: 1px solid rgba(167, 150, 178, 0.5);
-}
-
-.thumb {
-    width: 100%;
-    position: relative;
-    z-index: 2;
-}
-
-.projects-section-container {
-    width: 1006px;
-    margin: 0 auto;
-}
-
 /* ABOUT PAGE
 -------------------------------------------------------------- */
 
@@ -1141,10 +1118,143 @@ article + [data-readmore-toggle], article[data-readmore] {
     visibility: hidden;
 }
 
+#bio img {
+    border: 1px solid rgba(167, 150, 178, 0.5);
+}
+
+#bio .img {
+    text-align: center;
+    margin: 30px;
+}
+
+#bio .img p {
+    font-size: 14px;
+    margin-top: 1px;
+}
+
 /* PROJECTS PAGE
 -------------------------------------------------------------- */
 
 .projects-button {
+    background: url('images/portfolio-icons-small.svg') no-repeat;
+    float: left;
+    width: 83px;
+    text-align: center;
+    height: 110px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    transition: none;
+}
+
+.projects-button p {
+    width: 82px;
+    margin-top: -10px;
+}
+
+.projects-button:first-child {
+    margin-left: 0px;
+}
+
+#projects-nav {
+    height: 160px;
+    width: 993px;
+    margin: 0 auto;
+}
+
+#silkscreen-button { background-position:-10.053px -5.03px; }
+#silkscreen-button:hover { background-position:-10.053px -157.319px; }
+
+#painting-button { background-position:-119.326px -5.496px; }
+#painting-button:hover { background-position:-119.326px -157.785px; }
+
+#drawing-button { background-position:-444.701px -5.45px; }
+#drawing-button:hover { background-position:-444.701px -157.738px; }
+
+#pcomp-button { background-position:-880.162px -6.188px; }
+#pcomp-button:hover { background-position:-880.162px -158.478px; }
+
+#visual-button { background-position:-770.442px -5.863px; }
+#visual-button:hover { background-position:-770.442px -158.151px; }
+
+#ui-ux-button { background-position:-338.046px -4.984px; }
+#ui-ux-button:hover { background-position:-338.046px -157.273px; }
+
+#industrial-button { background-position:-660.699px -5.711px; }
+#industrial-button:hover { background-position:-660.699px -158px; }
+
+#mobile-button { background-position:-229.046px -5.822px; }
+#mobile-button:hover { background-position:-229.046px -158.11px; }
+
+#craft-button { background-position:-552.118px -5.545px; }
+#craft-button:hover { background-position:-552.118px -157.833px; }
+
+.thumb-container img {
+    width: 100%;
+    z-index: -2;
+    position: relative;
+}
+
+/*.thumb {
+    position: relative;
+    overflow: hidden;
+    box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+    -webkit-box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+    -moz-box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+}*/
+
+.thumb-container .thumb-overlay {
+    transition:opacity 0.3s;
+    -webkit-transition:opacity 0.3s;
+}
+
+.thumb-container:hover .thumb-overlay {
+    opacity:1;
+}
+
+.thumb-overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    width:94%;
+    height:225px;
+    background-color:rgba(60,44,71,0.85);
+    color: #F8E8A5;
+    font-family: "GillSansStd-Light";
+    font-size: 16px;
+    opacity: 0;
+    text-shadow: none;
+    text-align: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 30%;
+}
+
+.thumb-overlay h3 {
+  color: #F8E8A5;
+  font-family: "GillSansStd";
+}
+
+.thumb-container {
+    width: 320px;
+    height: 320px;
+    display: inline-block;
+    margin: 5px;
+    position: relative;
+    border: 1px solid rgba(167, 150, 178, 0.5);
+}
+
+.thumb {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.projects-section-container {
+    width: 1007px;
+    margin: 0 auto;
+}
+
+/*.projects-button {
     background: url('images/portfolio-icons.svg') no-repeat;
     float: left;
     width: 142px;
@@ -1199,4 +1309,4 @@ article + [data-readmore-toggle], article[data-readmore] {
 #sketchbooks-button:hover { background-position:-352.755px -623.524px; }
 
 #craft-button { background-position:-702.847px -214.096px; }
-#craft-button:hover { background-position:-702.773px -623.524px; }
+#craft-button:hover { background-position:-702.773px -623.524px; }*/
