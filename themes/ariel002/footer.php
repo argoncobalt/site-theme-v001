@@ -39,7 +39,7 @@
 <script src="../wp-content/themes/ariel002/js/readmore.js"></script>
 <script>
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 5){  
+    if ($(this).scrollTop() > 1){  
         $('header').addClass("sticky");
     }
     else{

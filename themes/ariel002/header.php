@@ -47,7 +47,7 @@
 				    	left: "0px"
 			    	});	
 
-			    	$( ".menu-mobile" ).html( "<a href='#'><i class='fa fa-arrow-left'></i></a>" );
+			    	$( ".menu-mobile" ).html( "<a href='#'><i class='fa fa-times'></i></a>" );
 		    	} else {
 			    	slideoutMenu.animate({
 				    	left: -slideoutMenuWidth
@@ -71,7 +71,7 @@
 					    	left: -slideoutMenuWidth
 				    	}, 250);
 
-					$( ".menu-mobile" ).html( "<a href='#'><i class='fa fa-arrow-left'></i></a>" );
+					$( ".menu-mobile" ).html( "<a href='#'><i class='fa fa-times'></i></a>" );
 			    	} 
 			    	
 			    	// toggle open class
@@ -79,6 +79,21 @@
 			    	$( ".menu-mobile" ).html( "<a href='#'>&#9776;</a>" );
 
 			    });
+
+				$(".projects-button").click(function() {
+
+				    var buttonID = this.id;
+				    var projectType = "#" + buttonID + "-container";
+				    console.log(projectType);
+
+				    $("#drawing-container, #ui-ux-container, #craft-container, #silkscreen-container, #painting-container, #mobile-container, #industrial-container, #visual-container, #pcomp-container").fadeOut(300, function() {
+						$("#drawing-container, #ui-ux-container, #craft-container, #silkscreen-container, #painting-container, #mobile-container, #industrial-container, #visual-container, #pcomp-container").addClass("hidden");
+				    });
+
+				    $(projectType).fadeIn(300, function() {
+				    	$(projectType).removeClass("hidden");
+				    });
+				});
 
 			});
 
@@ -149,14 +164,8 @@
 	</div><!--//container-->
 
 	<div class="slideout-menu">
-		<h3><a href="#" class="slideout-menu-toggle">×</a></h3>
+		<!--<h3><a href="#" class="slideout-menu-toggle"><i class="fa fa-times"></i></a></h3>-->
 		<?php wp_nav_menu('theme_location=header-menu&container=false&menu_id='); ?>
-		<div class="header_search_cont">
-			<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-			<input type="text" placeholder="SEARCH" name="s" id="s" />
-			<INPUT TYPE="image" src="http://electricstud.io/storage/paurology/search-icon-bright.png" BORDER="0" ALT="Submit Form" id="search-icon-mobile">
-			</form>
-		</div><!--//header_search_cont-->
 	</div>
 
 </header><!--//header-->
