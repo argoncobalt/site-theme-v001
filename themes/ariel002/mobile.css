@@ -148,6 +148,10 @@
 
 @media only screen and (min-width: 500px) and (max-width: 767px) { 
 
+	h1 {
+		margin-top: 0;
+	}
+
 	.container { 
 		width: 450px; 
 	}
@@ -407,6 +411,11 @@
 -------------------------------------------------------------- */
 
 @media only screen and (max-width: 499px) {
+
+	h1 {
+		line-height: 50px;
+		margin-top: 0px;
+	}
 
 	.splash h1 {
 		font-size: 50px;
@@ -766,6 +775,10 @@
 
 	#ui-ux-container .thumb-container {
 		margin: 0;
+	}
+
+	.copyright_text {
+		padding: 20px 40px 0 40px;
 	}
 
 	.header_search_cont { display: none; }
