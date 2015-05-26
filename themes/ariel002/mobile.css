@@ -8,7 +8,7 @@
 	}
 
 	.projects-section-container {
-		width: 1331px;
+		width: 1333px;
 	}
 
 }
@@ -180,7 +180,7 @@
 
 	.logo-mobile {
     	display: block;
-    	width: 40px;
+    	width: 30px;
     	float: left;
     	margin-bottom: 5px;
 	}
@@ -218,7 +218,7 @@
 	}
 
 	#header.sticky .menu_container {
-		margin-top: 20px;
+		margin-top: 13px;
 	}
 
 	.anchor{
@@ -276,6 +276,89 @@
 
 	#projects-nav {
 		width: 450px;
+	}
+
+	.projects-button {
+    	background: url('images/portfolio-icons-mobile.svg') no-repeat;
+    	height: 42px;
+    	width: 120px;
+	}
+
+	.projects-button p {
+		float: right;
+		width: 65px;
+		margin-top: 2px;
+		text-align: left;
+		font-size: 17px;
+	}
+
+	.projects-button p.one_line {
+		margin-top: 12px;
+	}
+
+	#projects-nav .mobile.placeholder {
+		float:left;
+		width: 55px;
+	}
+
+	#silkscreen { background-position:-126.708px -133.43px; }
+	#silkscreen:hover,
+	#silkscreen.projects_selected { 
+	  	background-position:-621.549px -139.626px; 
+	}
+
+	#painting { background-position:-295.122px -136.672px; }
+	#painting:hover,
+	#painting.projects_selected { 
+	  	background-position:-783.952px -139.858px; 
+	}
+
+	#drawing { background-position:-293.821px -280.542px; }
+	#drawing:hover,
+	#drawing.projects_selected { 
+	  	background-position:-782.651px -281.727px; 
+	}
+
+	#pcomp { background-position:-464.961px -421.608px; }
+	#pcomp:hover,
+	#pcomp.projects_selected { 
+	  	background-position:-932.774px -425.797px; 
+	}
+
+	#visual { background-position:-296.335px -421.447px; }
+	#visual:hover,
+	#visual.projects_selected { 
+	  	background-position:-785.165px -425.635px; 
+	}
+
+	#ui-ux { background-position:-126.433px -280.312px; }
+	#ui-ux:hover,
+	#ui-ux.projects_selected { 
+	  	background-position:-621.55px -281.495px; 
+	}
+
+	#industrial { background-position:-127.413px -421.374px; }
+	#industrial:hover,
+	#industrial.projects_selected { 
+	  	background-position:-622.529px -425.559px; 
+	}
+
+	#mobile { background-position:-463.749px -136.833px; }
+	#mobile:hover,
+	#mobile.projects_selected { 
+	  	background-position:-931.563px -140.02px; 
+	}
+
+	#craft { background-position:-461.304px -280.589px; }
+	#craft:hover,
+	#craft.projects_selected { 
+	  	background-position:-929.118px -281.772px; 
+	}
+
+	.projects-button:first-child,
+	.projects-button:nth-child(4),
+	.projects-button:nth-child(7) {
+    	margin-left: 0px;
 	}
 
 	.slide_box img, .slide_box iframe { width: 300px; height: 130px; }
@@ -351,12 +434,106 @@
 	}
 
 	#projects-nav {
+		width: 450px;
+	}
+
+	.projects-button {
+    	background: url('images/portfolio-icons-mobile.svg') no-repeat;
+    	height: 42px;
+    	width: 135px;
+	}
+
+	.projects-button p {
+		float: right;
+		width: 80px;
+		margin-top: 2px;
+		text-align: left;
+		font-size: 17px;
+	}
+
+	.projects-button p.one_line {
+		margin-top: 12px;
+	}
+
+	#projects-nav .mobile.placeholder {
+		float:left;
+		width: 55px;
+	}
+
+	#silkscreen { background-position:-126.708px -133.43px; }
+	#silkscreen:hover,
+	#silkscreen.projects_selected { 
+	  	background-position:-621.549px -139.626px; 
+	}
+
+	#painting { background-position:-295.122px -136.672px; }
+	#painting:hover,
+	#painting.projects_selected { 
+	  	background-position:-783.952px -139.858px; 
+	}
+
+	#drawing { background-position:-293.821px -280.542px; }
+	#drawing:hover,
+	#drawing.projects_selected { 
+	  	background-position:-782.651px -281.727px; 
+	}
+
+	#pcomp { background-position:-464.961px -421.608px; }
+	#pcomp:hover,
+	#pcomp.projects_selected { 
+	  	background-position:-932.774px -425.797px; 
+	}
+
+	#visual { background-position:-296.335px -421.447px; }
+	#visual:hover,
+	#visual.projects_selected { 
+	  	background-position:-785.165px -425.635px; 
+	}
+
+	#ui-ux { background-position:-126.433px -280.312px; }
+	#ui-ux:hover,
+	#ui-ux.projects_selected { 
+	  	background-position:-621.55px -281.495px; 
+	}
+
+	#industrial { background-position:-127.413px -421.374px; }
+	#industrial:hover,
+	#industrial.projects_selected { 
+	  	background-position:-622.529px -425.559px; 
+	}
+
+	#mobile { background-position:-463.749px -136.833px; }
+	#mobile:hover,
+	#mobile.projects_selected { 
+	  	background-position:-931.563px -140.02px; 
+	}
+
+	#craft { background-position:-461.304px -280.589px; }
+	#craft:hover,
+	#craft.projects_selected { 
+	  	background-position:-929.118px -281.772px; 
+	}
+
+	.projects-button:nth-child(odd) {
+    	margin-left: 0px;
+	}
+
+	#projects-nav {
 		width: 300px;
 	}
 
 	.thumb-container.mobile {
 	    display: inline-block;
 	}
+
+	#projects-nav img.mobile.placeholder {
+		float:left;
+		width: auto;
+	}
+
+	.projects-button {
+    	background: url('images/portfolio-icons-mobile.svg') no-repeat;
+	}	
 
 	img#gear1 { margin-left: 10px; margin-top: 115px; }
 	img#gear2 { margin-left: 80px; margin-top: 43px; }

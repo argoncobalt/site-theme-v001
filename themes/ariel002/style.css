@@ -1190,32 +1190,63 @@ article + [data-readmore-toggle], article[data-readmore] {
     margin: 0 auto;
 }
 
+.projects-button.projects_selected a {
+    color: #39373A;
+}
+
 #silkscreen { background-position:-10.053px -5.03px; }
-#silkscreen:hover { background-position:-10.053px -157.319px; }
+#silkscreen:hover,
+#silkscreen.projects_selected { 
+    background-position:-10.053px -157.319px; 
+}
 
 #painting { background-position:-119.326px -5.496px; }
-#painting:hover { background-position:-119.326px -157.785px; }
+#painting:hover,
+#painting.projects_selected { 
+    background-position:-119.326px -157.785px; 
+}
 
 #drawing { background-position:-444.701px -5.45px; }
-#drawing:hover { background-position:-444.701px -157.738px; }
+#drawing:hover,
+#drawing.projects_selected { 
+    background-position:-444.701px -157.738px; 
+}
 
 #pcomp { background-position:-880.162px -6.188px; }
-#pcomp:hover { background-position:-880.162px -158.478px; }
+#pcomp:hover,
+#pcomp.projects_selected { 
+    background-position:-880.162px -158.478px; 
+}
 
 #visual { background-position:-770.442px -5.863px; }
-#visual:hover { background-position:-770.442px -158.151px; }
+#visual:hover,
+#visual.projects_selected { 
+    background-position:-770.442px -158.151px; 
+}
 
 #ui-ux { background-position:-338.046px -4.984px; }
-#ui-ux:hover { background-position:-338.046px -157.273px; }
+#ui-ux:hover,
+#ui-ux.projects_selected { 
+    background-position:-338.046px -157.273px; 
+}
 
 #industrial { background-position:-660.699px -5.711px; }
-#industrial:hover { background-position:-660.699px -158px; }
+#industrial:hover,
+#industrial.projects_selected { 
+    background-position:-660.699px -158px; 
+}
 
 #mobile { background-position:-229.046px -5.822px; }
-#mobile:hover { background-position:-229.046px -158.11px; }
+#mobile:hover,
+#mobile.projects_selected { 
+    background-position:-229.046px -158.11px; 
+}
 
 #craft { background-position:-552.118px -5.545px; }
-#craft:hover { background-position:-552.118px -157.833px; }
+#craft:hover,
+#craft.projects_selected { 
+    background-position:-552.118px -157.833px; 
+}
 
 .thumb-container img {
     width: 100%;
@@ -1286,6 +1317,7 @@ article + [data-readmore-toggle], article[data-readmore] {
 .projects-section-container {
     width: 1007px;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 .projects-section-container a {

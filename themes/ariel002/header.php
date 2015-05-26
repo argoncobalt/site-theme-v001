@@ -82,13 +82,16 @@
 
 				$(".projects-button").click(function() {
 
+					$("#drawing, #painting, #ui-ux, #pcomp, #mobile, #craft, #silkscreen, #visual, #industrial").removeClass("projects_selected");
+
 				    var buttonID = this.id;
 				    var projectType = "#" + buttonID + "-container";
-				    console.log(projectType);
 
 				    $("#drawing-container, #ui-ux-container, #craft-container, #silkscreen-container, #painting-container, #mobile-container, #industrial-container, #visual-container, #pcomp-container").fadeOut(300, function() {
 						$("#drawing-container, #ui-ux-container, #craft-container, #silkscreen-container, #painting-container, #mobile-container, #industrial-container, #visual-container, #pcomp-container").addClass("hidden");
 				    });
+
+				    $("#" + buttonID).addClass("projects_selected");
 
 				    $(projectType).fadeIn(300, function() {
 				    	$(projectType).removeClass("hidden");
