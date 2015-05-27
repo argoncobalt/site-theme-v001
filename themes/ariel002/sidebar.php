@@ -16,4 +16,4 @@
 			
 			<?php endif; ?>
 			
-		</div><!--//sidebar-->
+		</div>

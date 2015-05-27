@@ -20,7 +20,7 @@ function ds_get_excerpt($num_chars) {
     $temp_parts[(count($temp_parts) - 1)] = '';
     
     if(strlen(strip_tags(get_the_content())) > 125)
-      return implode(" ",$temp_parts) . '...';
+      return implode(" ",$temp_parts).'... <a class="more-link" href="' . get_permalink() . '">Read more <i class="fa fa-arrow-right"></i></a>';
     else
       return implode(" ",$temp_parts);
 }

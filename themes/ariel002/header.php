@@ -108,11 +108,13 @@
 	<div class="container">
 
 		<div class="logo-container">
-			<a href="/"><img src="../wp-content/themes/ariel002/images/logo.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>
+			<!--<a href="/"><img src="../wp-content/themes/ariel002/images/logo.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>-->
+			<a href="/"><img src="http://electricstud.io/logo.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>
 		</div>
 
 		<div class="logo-mobile">
-			<a href="/"><img src="../wp-content/themes/ariel002/images/header-robot.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>
+			<!--<a href="/"><img src="../wp-content/themes/ariel002/images/header-robot.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>-->
+			<a href="/"><img src="http://electricstud.io/header-robot.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>
 		</div>
 	
 		<div class="menu_container">

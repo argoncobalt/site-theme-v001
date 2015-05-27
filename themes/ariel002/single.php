@@ -4,7 +4,7 @@
 		
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
-				<h1 class="single_title"><?php the_title(); ?></h1>
+				<h2 class="single_title"><?php the_title(); ?></h2>
 				
 				<div class="single_inside_content">
 				
@@ -35,7 +35,7 @@
 	
 		</div><!--//single_left-->
 		
-		<?php get_sidebar(); ?>
+		<div class="single_sidebar"><?php get_sidebar(); ?></div>
 		
 		<div class="clear"></div>
 		

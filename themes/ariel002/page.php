@@ -22,6 +22,8 @@
 			<?php endif; ?>                    									
 	
 		</div><!--//single_left-->
+
+		<!--<?php get_sidebar(); ?>-->
 		
 		<div class="clear"></div>
 		

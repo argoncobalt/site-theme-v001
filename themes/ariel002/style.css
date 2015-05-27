@@ -721,7 +721,7 @@ header.sticky .double-rule {
 -------------------------------------------------------------- */
 
 #main_cont { 
-    padding-top: 30px; 
+    padding-top: 0px; 
 }
 
 .logo_cont { 
@@ -741,10 +741,40 @@ header.sticky .double-rule {
 .slide_prev, .slide_next { position: absolute; top: 50%; margin-top: -20px; z-index: 50; cursor: pointer; }
 .slide_prev { left: 0; }
 .slide_next { right: 0; }
-.home_box { float: left; width: 309px; margin-right: 26px; margin-bottom: 30px; }
-.home_box h3 { font-size: 18px; margin: 15px 0; font-weight: normal; font-family: 'Source Sans Pro', sans-serif; }
-.home_box p { margin-top: 0; }
-.home_box_last { margin-right: 0; }
+
+.home_box { 
+    float: none; 
+    width: 710px; 
+    margin-right: 0px; 
+    margin-bottom: 30px; 
+}
+
+.home_box h3 { 
+    font-size: 18px; 
+    margin: 15px 0; 
+    font-weight: normal; 
+}
+
+.home_box p { 
+    margin-top: 0; 
+}
+
+.home_box:first-child .double-rule {
+    display: none;
+}
+
+.home_box .double-rule {
+    margin-bottom: 30px;
+}
+
+.post_details {
+    font-size: 14px;
+}
+
+/*.home_box_last { 
+    margin-right: 0; 
+}*/
+
 .home_box img,
 .home_box iframe { width: 309px; height: 180px; }
 .home_box img:hover { opacity:0.8; filter:alpha(opacity=80); }
@@ -764,9 +794,30 @@ header.sticky .double-rule {
 .home_wide_box .link_inside_cont { vertical-align: middle; text-align: center; margin: 0; display: table-cell; font-size: 25px; font-weight: 200; font-family: 'Source Sans Pro', sans-serif;  }
 .load_more_cont { margin-bottom: 30px; }
 .load_more_cont a { display: inline-block; padding: 8px 30px; background-color: #e6e6e6; font-size: 13px; color: #000; }
-.single_left { float: left; width: 656px; margin-bottom: 30px; }
-.single_inside_content img { max-width: 100%; height: inherit; }
-.single_inside_content iframe { max-width: 100%; }
+
+.single_left { 
+    float: left; 
+    width: 656px; 
+    margin-bottom: 30px; 
+}
+
+.single_inside_content,
+.single_sidebar {
+    margin-top: 40px;
+}
+
+.single_left .single_inside_content {
+    margin-top: 20px;
+}
+
+.single_inside_content img { 
+    max-width: 100%; 
+    height: inherit; 
+}
+
+.single_inside_content iframe { 
+    max-width: 100%; 
+}
 
 h1.single_title { 
     margin-top: 0; 
@@ -794,11 +845,52 @@ h1 {
 /* SIDEBAR
 -------------------------------------------------------------- */
 
-#sidebar { float: right; width: 245px; margin-bottom: 30px; }
-.side_box { margin-bottom: 25px; padding-top: 8px; border-top: 1px solid #ccc; }
-.side_box h3.side_title { margin-top: 0; font-weight: normal; font-size: 16px; margin-bottom: 10px; }
-.side_box ul { list-style-type: none; margin: 0; padding: 0; }
-.side_box ul li { margin-bottom: 8px; }
+#sidebar { 
+    float: right; 
+    width: 245px; 
+    margin-bottom: 30px; 
+}
+
+.side_box { 
+    margin-bottom: 25px; 
+    padding-top: 8px; 
+    border-top: 1px solid #ccc; 
+    display: none;
+}
+
+.container #sidebar .side_box {
+    display: block;
+}
+
+.side_box:first-child {
+    border-top: 0;
+}
+
+.side_box h3.side_title { 
+    margin-top: 0; 
+    font-weight: normal; 
+    font-size: 16px; 
+    margin-bottom: 10px; 
+}
+
+.side_box ul { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.side_box ul li { 
+    margin-bottom: 8px; 
+}
+
+h3.side_title {
+    font-family: 'GillSansStd', sans-serif;
+}
+
+#searchsubmit {
+    font-family: "FontAwesome";
+    content: '\f002';
+}
 
 /* FOOTER
 -------------------------------------------------------------- */
@@ -1072,6 +1164,10 @@ img#gear8 {
 /* ABOUT PAGE
 -------------------------------------------------------------- */
 
+#about #sidebar {
+    display: none;
+}
+
 .about-nav p {
     float: left;
     margin-left: 98px;
@@ -1163,6 +1259,10 @@ article + [data-readmore-toggle], article[data-readmore] {
 
 /* PROJECTS PAGE
 -------------------------------------------------------------- */
+
+#projects-page #sidebar {
+    display: none;
+}
 
 .projects-button {
     background: url('images/portfolio-icons-small.svg') no-repeat;
@@ -1368,3 +1468,18 @@ article + [data-readmore-toggle], article[data-readmore] {
 .thumb-container.mobile {
     display: none;
 }
+
+/* SHOP
+-------------------------------------------------------------- */
+
+#shop #sidebar {
+    display: none;
+}
+
+/* BLOG
+-------------------------------------------------------------- */
+
+#content.blog {
+    float: left;
+}
+
