@@ -57,7 +57,7 @@
 			<?php if($x < 3 && !is_paged()) { ?>
 				<div class="home_box <?php if($x == 2) { echo 'home_box_last'; } ?>">
 
-					<div class="double-rule"></div>
+					<!--<div class="double-rule"></div>-->
 				
 					<?php if(get_post_meta( get_the_ID(), 'page_featured_type', true ) == 'youtube') { ?>
 						<iframe width="560" height="315" src="http://www.youtube.com/embed/<?php echo get_post_meta( get_the_ID(), 'page_video_id', true ); ?>" frameborder="0" allowfullscreen></iframe>
@@ -67,8 +67,8 @@
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('home-box'); ?></a>
 					<?php } ?>
 					
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<p class="post_details"><?php the_time('F j, Y g:i') ?> | <?php the_category(', ') ?></p>
+					<h2 class="title_permalink"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<p class="post_details"><?php the_time('F j, Y g:i') ?> <i class="fa fa-arrows"></i> <?php the_category(', ') ?></p>
 					<p><?php echo ds_get_excerpt('300'); ?></p>
 				</div><!--//home_box-->
 			
@@ -114,7 +114,6 @@
 			<?php next_posts_link('LOAD MORE'); ?>
 		</div><!--//load_more_cont-->	
 			
-		
 		<?php wp_reset_query(); ?>   
 
 		<?php get_sidebar(); ?>                                 		

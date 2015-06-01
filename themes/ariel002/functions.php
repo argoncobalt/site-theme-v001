@@ -20,7 +20,7 @@ function ds_get_excerpt($num_chars) {
     $temp_parts[(count($temp_parts) - 1)] = '';
     
     if(strlen(strip_tags(get_the_content())) > 125)
-      return implode(" ",$temp_parts).'... <a class="more-link" href="' . get_permalink() . '">Read more <i class="fa fa-arrow-right"></i></a>';
+      return implode(" ",$temp_parts).'... <p><a class="more_link" href="' . get_permalink() . '">Read more <i class="fa fa-caret-right fa-lg"></i></a></p>';
     else
       return implode(" ",$temp_parts);
 }
@@ -200,3 +200,20 @@ function pages_extra_fields_box_save( $post_id ) {
 	update_post_meta( $post_id, 'page_video_id', $page_video_id );
 }
 /* Custom fields for PAGES Ends */
+
+//add .current-cat css class to categories of single post in 'categories' widget//
+add_filter('wp_list_categories','highlight_single_posts_categories');
+
+function highlight_single_posts_categories($output) {
+global $post;
+if(is_single()) :
+$categories = wp_get_post_categories($post->ID);
+if($categories) { foreach($categories as $value) {
+    if(preg_match('#item-' . $value . '">#', $output)) {
+    $output = str_replace('item-' . $value . '">', 'item-' . $value . ' current-cat">', $output);
+    }
+    }
+}
+endif;
+return $output;
+}

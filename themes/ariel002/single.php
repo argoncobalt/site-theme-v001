@@ -5,23 +5,20 @@
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 				<h2 class="single_title"><?php the_title(); ?></h2>
+				<p class="post_details"><?php the_time('F j, Y g:i') ?> <i class="fa fa-arrows"></i> <?php the_category(', ') ?></p>
 				
-				<div class="single_inside_content">
+				<div class="single_inside_content blog_post">
 				
 					<?php the_content(); ?>
 					
 				</div><!--//single_inside_content-->
 				
-				<br /><br />
-				
-										
-				
 				<div class="next_prev_cont">
 					<div class="left">
-						 <?php previous_post_link('%link', '<i>Previous post</i><br />%title'); ?> 
+						 <?php previous_post_link('%link', '<div class="left"><i class="fa fa-caret-left fa-lg"></i></div><div class="right">Previous post<br /><b>%title</b></div>'); ?> 
 					</div>
 					<div class="right">
-						 <?php next_post_link('%link', '<i>Next post</i><br />%title'); ?> 
+						 <?php next_post_link('%link', '<div class="left">Next post <br /><b>%title</b></div><div class="right"><i class="fa fa-caret-right fa-lg"></i></div>'); ?> 
 					</div>
 					<div class="clear"></div>
 				</div><!--//next_prev_cont-->
