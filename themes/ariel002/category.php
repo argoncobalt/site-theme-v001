@@ -3,17 +3,9 @@
 		<div class="desktop"><?php get_sidebar(); ?> </div>
 		<div id="content" class="archives">
 
-		<p class="page-title">
-		    <?php if ( is_day() ) : ?>
-		        <?php printf( __( '<a href="/ariel/blog">Blog</a> <i class="fa fa-caret-right"></i> Archives <i class="fa fa-caret-right"></i> <b><span>%s</span></b>', 'twentyten' ), get_the_date() ); ?>
-		    <?php elseif ( is_month() ) : ?>
-		        <?php printf( __( '<a href="/ariel/blog">Blog</a> <i class="fa fa-caret-right"></i> Archives <i class="fa fa-caret-right"></i> <b><span>%s</span></b>', 'twentyten' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyten' ) ) ); ?>
-		    <?php elseif ( is_year() ) : ?>
-		        <?php printf( __( '<a href="/ariel/blog">Blog</a> <i class="fa fa-caret-right"></i> Archives <i class="fa fa-caret-right"></i> <b><span>%s</span></b>', 'twentyten' ), get_the_date( _x( 'Y', 'yearly archives date format', 'twentyten' ) ) ); ?>
-		    <?php else : ?>
-		        <?php _e( 'Blog Archives', 'twentyten' ); ?>
-		    <?php endif; ?>
-		</p>
+		<p class="page-title"><?php
+		    printf( __( '<a href="/ariel/blog">Blog</a> <i class="fa fa-caret-right"></i> Categories <i class="fa fa-caret-right"></i> <b>%s</b>', 'twentyten' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+		?></p>
 		
 		<?php if(is_category()) { ?>
 		<!--<div class="archive_title">
@@ -58,8 +50,8 @@
 			<?php next_posts_link('LOAD MORE'); ?>
 		</div><!--//load_more_cont-->	
 		
-		<div class="clear"></div>
-
+		<div class="clear"></div>		
+		
 		<div class="mobile"><?php include( TEMPLATEPATH . '/sidebar.php'); ?></div>		
 		
 <?php get_footer(); ?> 		

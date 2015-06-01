@@ -580,6 +580,13 @@ textarea {
     background-color: #F7f5e7;
     border: 1px #ddd solid;
     border-radius: 3px;
+    font-family: "GillSansStd-Light";
+    font-size: 17px;
+    padding: 8px 9px 3px 10px;
+}
+
+h1.single_title {
+    display: none;
 }
 
 /* HEADER
@@ -761,7 +768,7 @@ header.sticky .double-rule {
     border-top: 1px #ddd solid;
 }
 
-.home_box:first-child {
+.home_box:nth-child(2) {
     border-top: 0;
     padding-top: 0;
 }
@@ -915,11 +922,42 @@ h1 {
     margin-bottom: 15px; 
 }
 
+.first_comment {
+    margin-bottom: 40px;
+    font-family: "GillSansStd";
+}
+
+.comment_amt {
+    font-family: "GillSansStd";
+}
+
+#commentform textarea {
+    width: 691px;
+}
+
+#commentform input[type=text] {
+    width: 450px;
+    margin-bottom: 10px;
+    margin-right: 7px;
+}
+
 #commentform input[type=submit] { 
-    background-color: #161616; 
-    color: #fff; 
-    border: 1px solid #6E6E6E; 
-    padding: 3px 5px; 
+    background: #5C3E6C;
+    font-family: 'GillSansStd-Light';
+    font-size: 17px;
+    color: #F8E8A5;
+    padding: 8px 9px 3px 10px;
+    border-radius: 2px; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background 0.3s ease 0s, color 0.3s ease 0s; 
+}
+
+#commentform input[type=submit]:hover {
+    background-color: #BA6D82;
+    transition: background 0.3s ease 0s, color 0.3s ease 0s; 
 }
 
 .archive_title { 
@@ -933,6 +971,7 @@ h1 {
 
 .next_prev_cont { 
     padding: 25px 0; 
+    font-size: 17px;
 }
 
 .next_prev_cont .left { 
@@ -1662,4 +1701,16 @@ article + [data-readmore-toggle], article[data-readmore] {
 .current-cat a {
     font-family: "GillSansStd";
     color: #5C3E6C;
+}
+
+.archives .page-title {
+    margin-top: 30px;
+}
+
+.archives .page-title .fa {
+    margin: 5px;
+}
+
+.required {
+    color: #BA6D82;
 }

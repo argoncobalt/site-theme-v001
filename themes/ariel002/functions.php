@@ -202,7 +202,7 @@ function pages_extra_fields_box_save( $post_id ) {
 /* Custom fields for PAGES Ends */
 
 //add .current-cat css class to categories of single post in 'categories' widget//
-add_filter('wp_list_categories','highlight_single_posts_categories');
+/*add_filter('wp_list_categories','highlight_single_posts_categories');
 
 function highlight_single_posts_categories($output) {
 global $post;
@@ -216,4 +216,4 @@ if($categories) { foreach($categories as $value) {
 }
 endif;
 return $output;
-}
+}*/

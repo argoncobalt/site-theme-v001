@@ -40,6 +40,8 @@
 		<?php } ?>
 		
 		<div id="content" class="blog">
+
+			<h1 class="single_title">Blog</h1>
 		
 		<?php
 		$category_ID = get_category_id('blog');

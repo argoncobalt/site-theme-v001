@@ -1,76 +1,43 @@
-<?php
-/**
- * The template for displaying Comments.
- *
- * The area of the page that contains both current comments
- * and the comment form. The actual display of comments is
- * handled by a callback to shape_comment() which is
- * located in the inc/template-tags.php file.
- *
- * @package Shape
- * @since Shape 1.0
- */
-?>
- 
-<?php
-    /*
-     * If the current post is protected by a password and
-     * the visitor has not yet entered the password we will
-     * return early without loading the comments.
-     */
-    if ( post_password_required() )
-        return;
-?>
- 
-    <div id="comments" class="comments-area">
- 
-    <?php // You can start editing here -- including this comment! ?>
- 
-    <?php if ( have_comments() ) : ?>
-        <h2 class="comments-title">
-            <?php
-                printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'shape' ),
-                    number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-            ?>
-        </h2>
- 
-        <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through? If so, show navigation ?>
-        <nav role="navigation" id="comment-nav-above" class="site-navigation comment-navigation">
-            <h1 class="assistive-text"><?php _e( 'Comment navigation', 'shape' ); ?></h1>
-            <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'shape' ) ); ?></div>
-            <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'shape' ) ); ?></div>
-        </nav><!-- #comment-nav-before .site-navigation .comment-navigation -->
-        <?php endif; // check for comment navigation ?>
- 
-        <ol class="commentlist">
-            <?php
-                /* Loop through and list the comments. Tell wp_list_comments()
-                 * to use shape_comment() to format the comments.
-                 * If you want to overload this in a child theme then you can
-                 * define shape_comment() and that will be used instead.
-                 * See shape_comment() in inc/template-tags.php for more.
-                 */
-                wp_list_comments( array( 'callback' => 'shape_comment' ) );
-            ?>
-        </ol><!-- .commentlist -->
- 
-        <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through? If so, show navigation ?>
-        <nav role="navigation" id="comment-nav-below" class="site-navigation comment-navigation">
-            <h1 class="assistive-text"><?php _e( 'Comment navigation', 'shape' ); ?></h1>
-            <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'shape' ) ); ?></div>
-            <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'shape' ) ); ?></div>
-        </nav><!-- #comment-nav-below .site-navigation .comment-navigation -->
-        <?php endif; // check for comment navigation ?>
- 
-    <?php endif; // have_comments() ?>
- 
-    <?php
-        // If comments are closed and there are comments, let's leave a little note, shall we?
-        if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-    ?>
-        <p class="nocomments"><?php _e( 'Comments are closed.', 'shape' ); ?></p>
+<?php if($comments) : ?>
+    <h3 class="comment_amt"> 
+        <?php comments_number( 'no responses', 'One Comment', '% Comments' ); ?>
+    </h3>
+    <ol>
+    <?php foreach($comments as $comment) : ?>
+        <li id="comment-<?php comment_ID(); ?>">
+            <?php if ($comment->comment_approved == '0') : ?>
+                <p>Your comment is awaiting approval</p>
+            <?php endif; ?>
+            <?php comment_text(); ?>
+            <cite><?php comment_type(); ?> by <?php comment_author_link(); ?> on <?php comment_date(); ?> at <?php comment_time(); ?></cite>
+        </li>
+    <?php endforeach; ?>
+    </ol>
+<?php else : ?>
+    <h3 class="first_comment">Be the first one to comment...</h3>
+<?php endif; ?>
+
+<?php if(comments_open()) : ?>
+    <?php if(get_option('comment_registration') && !$user_ID) : ?>
+        <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p><?php else : ?>
+        <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+            <?php if($user_ID) : ?>
+                <p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Log out &raquo;</a></p>
+            <?php else : ?>
+                <p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
+                <label for="author">Name<span class="required">*</span> <!--<?php if($req) echo "(required)"; ?>--></label></p>
+                <p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
+                <label for="email">Email (will not be published)<span class="required">*</span> <!--<?php if($req) echo "(required)"; ?>--></label></p>
+                <p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+                <label for="url">Website</label></p>
+            <?php endif; ?>
+            <p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+            <p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+            <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /></p>
+            <?php do_action('comment_form', $post->ID); ?>
+        </form>
+        <p class="required">*Required fields</p>
     <?php endif; ?>
- 
-    <?php comment_form(); ?>
- 
-</div><!-- #comments .comments-area -->
+<?php else : ?>
+    <p>The comments are closed.</p>
+<?php endif; ?>
