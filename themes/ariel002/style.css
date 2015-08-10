@@ -589,6 +589,10 @@ h1.single_title {
     display: none;
 }
 
+/*#mobile-slideout-menu {
+    display: none;
+}*/
+
 /* HEADER
 -------------------------------------------------------------- */
 
@@ -597,9 +601,6 @@ header.sticky {
     top: 0; 
     left: 0; 
     padding: 5px 0; 
-    /*-moz-box-shadow: 0 0 2px 1px #ccc; 
-    -webkit-box-shadow: 0 0 2px 1px #ccc; 
-    box-shadow: 0 0 2px 1px #ccc; */
     width: 100%; 
     background-color: #F7F5E7; 
     border-bottom: 1px #ddd solid;
@@ -609,6 +610,17 @@ header.sticky {
     // set animation
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+}
+
+header.sticky .logo-container {
+    width: 327px;
+    // set animation
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+header.sticky .double-rule {
+    display: none;
 }
 
 header {
@@ -626,18 +638,8 @@ header .logo-container {
     transition: all 0.4s ease;
 }
 
-header.sticky .logo-container {
-    width: 327px;
-    // set animation
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-}
-
-header.sticky .double-rule {
-    display: none;
-}
-
-.logo-mobile {
+.logo-mobile,
+.logo-tablet {
     display: none;
 }
 
@@ -716,8 +718,14 @@ header.sticky .double-rule {
     color: #BA6D82;
 }
 
-.menu_container ul li ul li a:hover { color: #444; }
-.header_right { float: right; }
+.menu_container ul li ul li a:hover { 
+    color: #444; 
+}
+
+.header_right { 
+    float: right; 
+}
+
 .header_search_cont { float: right; position: relative; margin-left: 8px; }
 .header_search_cont input[type=text] { width: 155px; height: 24px; box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -732,6 +740,18 @@ header.sticky .double-rule {
 .header_right img { 
     float: left; 
     margin-left: 8px; 
+}
+
+.nav-toggle:before {
+    content: "\f0c9";
+    font-family: "FontAwesome";
+    font-weight: 100;
+}
+
+.nav-toggle.active:before {
+    content: "\00d7";
+    font-size: 36px;
+    font-weight: 800;
 }
 
 /* CONTENT
@@ -1427,11 +1447,11 @@ article + [data-readmore-toggle], article[data-readmore] {
     visibility: hidden;
 }
 
-#bio img {
+#about img {
     border: 1px solid rgba(167, 150, 178, 0.5);
 }
 
-#bio .img {
+#about .img {
     text-align: center;
     margin-bottom: 30px;
 }
@@ -1713,4 +1733,12 @@ article + [data-readmore-toggle], article[data-readmore] {
 
 .required {
     color: #BA6D82;
+}
+
+.comments {
+    margin-bottom: 30px; 
+    background-color: #F7f5e7;
+    border: 1px #ddd solid;
+    border-radius: 3px;
+    padding: 30px;
 }

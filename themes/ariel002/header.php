@@ -14,6 +14,8 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/mobile.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/scrollTop.css" type="text/css" charset="utf-8"/>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/responsive-nav.css" type="text/css" charset="utf-8"/>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/scripts.js"></script>
@@ -32,7 +34,7 @@
 	<script>
 		$( document ).ready(function() {
 
-		$('.menu-mobile').on('click', function(event){
+			/*$('.menu-mobile').on('click', function(event){
 		    	event.preventDefault();
 		    	// create menu variables
 		    	var slideoutMenu = $('.slideout-menu');
@@ -51,7 +53,7 @@
 		    	} else {
 			    	slideoutMenu.animate({
 				    	left: -slideoutMenuWidth
-			    	}, 250);	
+			    	}, 250);
 
 			    	$( ".menu-mobile" ).html( "<a href='#'>&#9776;</a>" );
 		    	}
@@ -74,31 +76,30 @@
 					$( ".menu-mobile" ).html( "<a href='#'><i class='fa fa-times'></i></a>" );
 			    	} 
 			    	
-			    	// toggle open class
-			    	slideoutMenu.removeClass("open");
-			    	$( ".menu-mobile" ).html( "<a href='#'>&#9776;</a>" );
+		    	slideoutMenu.removeClass("open");
+		    	$( ".menu-mobile" ).html( "<a href='#'>&#9776;</a>" );
 
+		    }); */
+
+			$(".projects-button").click(function() {
+
+				$("#drawing, #painting, #ui-ux, #pcomp, #mobile, #craft, #silkscreen, #visual, #industrial").removeClass("projects_selected");
+
+			    var buttonID = this.id;
+			    var projectType = "#" + buttonID + "-container";
+
+			    $("#drawing-container, #ui-ux-container, #craft-container, #silkscreen-container, #painting-container, #mobile-container, #industrial-container, #visual-container, #pcomp-container").fadeOut(300, function() {
+					$("#drawing-container, #ui-ux-container, #craft-container, #silkscreen-container, #painting-container, #mobile-container, #industrial-container, #visual-container, #pcomp-container").addClass("hidden");
 			    });
 
-				$(".projects-button").click(function() {
+			    $("#" + buttonID).addClass("projects_selected");
 
-					$("#drawing, #painting, #ui-ux, #pcomp, #mobile, #craft, #silkscreen, #visual, #industrial").removeClass("projects_selected");
-
-				    var buttonID = this.id;
-				    var projectType = "#" + buttonID + "-container";
-
-				    $("#drawing-container, #ui-ux-container, #craft-container, #silkscreen-container, #painting-container, #mobile-container, #industrial-container, #visual-container, #pcomp-container").fadeOut(300, function() {
-						$("#drawing-container, #ui-ux-container, #craft-container, #silkscreen-container, #painting-container, #mobile-container, #industrial-container, #visual-container, #pcomp-container").addClass("hidden");
-				    });
-
-				    $("#" + buttonID).addClass("projects_selected");
-
-				    $(projectType).fadeIn(300, function() {
-				    	$(projectType).removeClass("hidden");
-				    });
-				});
-
+			    $(projectType).fadeIn(300, function() {
+			    	$(projectType).removeClass("hidden");
+			    });
 			});
+
+		});
 
 	</script>
 
@@ -108,21 +109,27 @@
 	<div class="container">
 
 		<div class="logo-container">
-			<!--<a href="/"><img src="../wp-content/themes/ariel002/images/logo.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>-->
-			<a href="/"><img src="http://electricstud.io/logo.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>
-		</div>
-
-		<div class="logo-mobile">
-			<!--<a href="/"><img src="../wp-content/themes/ariel002/images/header-robot.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>-->
-			<a href="/"><img src="http://electricstud.io/header-robot.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>
+			<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>
 		</div>
 	
 		<div class="menu_container">
 			<?php wp_nav_menu('theme_location=header-menu&container=false&menu_id='); ?>
 		</div>
 
-		<div class="menu-mobile">
-			<a href="#">&#9776;</a>
+		<div class="logo-tablet">
+			<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/header-robot.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>
+		</div>
+
+		<div class="menu-mobile" id="mobile-icon">
+
+			<div class="logo-mobile">
+				<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/header-robot.svg" alt="Ariel Cotton The Electronic Sketchbook logo"></a>
+			</div>
+			<nav class="nav-collapse">
+				<div class="double-rule"></div>
+				<?php wp_nav_menu('theme_location=header-menu&container=false&menu_id='); ?>
+			</nav>
+			<!--<a href="#">&#9776;</a>-->
 		</div>
 		
 		<!--<div class="header_right">
@@ -168,11 +175,11 @@
 
 	</div><!--//container-->
 
-	<div class="slideout-menu">
-		<!--<h3><a href="#" class="slideout-menu-toggle"><i class="fa fa-times"></i></a></h3>-->
+	<!--<div class="slideout-menu">
 		<?php wp_nav_menu('theme_location=header-menu&container=false&menu_id='); ?>
-	</div>
+	</div>-->
 
 </header><!--//header-->
+
 <div id="main_cont">
 	<div class="container">

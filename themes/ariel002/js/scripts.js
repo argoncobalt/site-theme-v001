@@ -1,4 +1,4 @@
-  function creative_slider() {
+function creative_slider() {
   
 //	var intervalID_slide;
         my_slider_counter = 0;
@@ -96,28 +96,25 @@
 	$('#slideshow_cont').hover(
 		function() {
 			clearInterval(intervalID_slide);
-			//alert('hover in');
 		},
 		function() {
 			intervalID_slide = setInterval(next_slide_slider, 8000);  
-			//alert('hover out');
 		}
 	);
-  
   
   }  
   
 $(document).ready(function() {
 	
-        $('.menu_container li').hover(
-            function () {
-                $('ul:first', this).css('display','block');
-     
-            }, 
-            function () {
-                $('ul:first', this).css('display','none');         
-            }
-        );               	
+    $('.menu_container li').hover(
+        function () {
+            $('ul:first', this).css('display','block');
+ 
+        }, 
+        function () {
+            $('ul:first', this).css('display','none');         
+        }
+    );               	
 	    
 	creative_slider();
 	    

@@ -1,5 +1,6 @@
 	</div><!--//container-->
 </div><!--//main_cont-->
+
 <?php $shortname = "creative"; ?>
 <footer id="footer">
 	<SCRIPT LANGUAGE="JavaScript"> 
@@ -34,10 +35,15 @@
 		
 	</div><!--//container-->
 </footer><!--//footer-->
+
+<a href="#0" class="cd-top">Top</a>
+
 <?php wp_footer(); ?>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/load-more.js"></script>
-<script src="../wp-content/themes/ariel002/js/readmore.js"></script>
-<script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/js/scrollTop.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/js/readmore.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/js/responsive-nav.js"></script>
+<!--<script>
 $(window).scroll(function() {
     if ($(this).scrollTop() > 10){  
         $('header').addClass("sticky");
@@ -46,9 +52,24 @@ $(window).scroll(function() {
         $('header').removeClass("sticky");
     }
 });
-</script>
+</script>-->
 <script>
 	$('article').readmore({speed: 500});
 </script>
+<script>
+  	var navigation = responsiveNav(".nav-collapse");
+</script>
+
+	<script>
+		$( document ).ready(function() {
+
+			$( ".nav-toggle" ).click(function() {
+			  	console.log("clicking on hamburger");
+			});
+
+		});
+
+	</script>
+
 </body>
 </html>
