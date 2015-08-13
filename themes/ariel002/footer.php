@@ -43,33 +43,12 @@
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/scrollTop.js"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/readmore.js"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/responsive-nav.js"></script>
-<!--<script>
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 10){  
-        $('header').addClass("sticky");
-    }
-    else{
-        $('header').removeClass("sticky");
-    }
-});
-</script>-->
 <script>
 	$('article').readmore({speed: 500});
 </script>
 <script>
   	var navigation = responsiveNav(".nav-collapse");
 </script>
-
-	<script>
-		$( document ).ready(function() {
-
-			$( ".nav-toggle" ).click(function() {
-			  	console.log("clicking on hamburger");
-			});
-
-		});
-
-	</script>
 
 </body>
 </html>
