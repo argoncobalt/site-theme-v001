@@ -1488,7 +1488,27 @@ article + [data-readmore-toggle], article[data-readmore] {
 }
 
 .side-by-side {
-    width: 48%;
+    width: 49%;
+    margin-bottom: 10px;
+}
+
+.enemies .left-2 {
+    width: 53%;
+    float: left;
+}
+
+.enemies .right-2 {
+    width: 45.5%;
+    float: right;
+}
+
+.more_link .fa-caret-left {
+    margin-right: 5px;
+}
+
+.more_link.projects {
+    font-size: 17px;
+    padding: 10px 10px 5px 10px;
 }
 
 .vertical-img {
@@ -1507,7 +1527,8 @@ article + [data-readmore-toggle], article[data-readmore] {
     background: url('images/portfolio-icons-small.svg') no-repeat;
     float: left;
     width: 83px;
-    text-align: center;
+    /*text-align: center;*/
+    display: inline-block;
     height: 110px;
     margin-left: 30px;
     margin-bottom: 30px;
@@ -1525,8 +1546,11 @@ article + [data-readmore-toggle], article[data-readmore] {
 
 #projects-nav {
     height: 160px;
-    width: 993px;
+    /*width: 993px;*/
+    width: 648px;
+    text-align: center;
     margin: 0 auto;
+    position: relative;
 }
 
 .projects-button.projects_selected a {

@@ -157,17 +157,8 @@
   		width: 665px;
 	}
 
-	#projects-nav {
-		width: 535px;
-		height: 300px;
-	}
-
-	.projects-button:nth-child(6) {
-		margin-left: 55px;
-	}
-
 	.projects-button {
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 	} 
 
 	.thumb-container.mobile {
