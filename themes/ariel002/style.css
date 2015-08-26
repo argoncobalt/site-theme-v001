@@ -593,6 +593,15 @@ h1.single_title {
     display: none;
 }
 
+.inline-block {
+    display: inline-block;
+}
+
+img.inline-block {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 /* HEADER
 -------------------------------------------------------------- */
 
