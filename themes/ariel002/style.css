@@ -602,6 +602,31 @@ img.inline-block {
     margin-right: 10px;
 }
 
+.ninety-percent {
+    width: 90%;
+}
+
+.eighty-percent {
+    width: 80%;
+}
+
+.seventy-percent {
+    width: 70%;
+}
+
+.sixty-percent {
+    width: 60%;
+}
+
+.forty-percent {
+    width: 40%;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+
 /* HEADER
 -------------------------------------------------------------- */
 
@@ -1498,7 +1523,25 @@ article + [data-readmore-toggle], article[data-readmore] {
 
 .side-by-side {
     width: 49%;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.biz-card {
+    width: 380px;
+}
+
+.multiple-img-wrapper {
+    text-align: center;
+}
+
+.multiple-img-wrapper * {
+    display: inline-block;
+    margin: 0 10px 15px;
+}
+
+.project-page {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .enemies .left-2 {
@@ -1521,7 +1564,17 @@ article + [data-readmore-toggle], article[data-readmore] {
 }
 
 .vertical-img {
-    width: 70%;
+    width: 78%;
+}
+
+.browse-thumbs {
+    width: 10%;
+    float: left;
+    text-align: center;
+}
+
+.browse-thumbs a {
+    display: inline;
 }
 
 .projects_selected p {

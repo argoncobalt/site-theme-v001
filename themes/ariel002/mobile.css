@@ -53,9 +53,28 @@
 	    width: 100%;
 	}
 
+	.page-child #main_cont .project-page .clearfix img.side-by-side {
+		float: none;
+		width: 99.6%;
+	}
+
 	#bio .img {
 		margin: 0;
 		margin-bottom: 20px;
+	}
+
+	.page-child #main_cont .biz-card {
+	    width: 342px;
+	    margin: 0 0 20px;
+	    display: inline-block;
+	}
+
+	.page-child #main_cont .forty-percent {
+	    width: 50%;
+	}
+
+	.page-child #main_cont .biz-card:first-child {
+		margin-right: 20px;
 	}
 
 	.vertical-img {
@@ -186,6 +205,15 @@
 
 	.page-child #main_cont img {
 	    width: 100%;
+	}
+
+	.page-child #main_cont .project-page .clearfix img.side-by-side {
+		float: none;
+		width: 99.6%;
+	}
+
+	.multiple-img-wrapper * {
+	    margin: 0 0 15px;
 	}
 
 	h1 {
@@ -328,7 +356,25 @@
 		margin: 0;
 	}
 
+	.projects-button p {
+		margin-top: 50px;
+	}
+
 	#projects-nav {
+		width: 309px;
+	}
+
+	#visual {
+		margin-left: 0;
+	}
+
+	#visual,
+	#painting,
+	#industrial {
+		margin-top: 20px;
+	}
+
+	/*#projects-nav {
 		width: 450px;
 	}
 
@@ -413,7 +459,7 @@
 	.projects-button:nth-child(4),
 	.projects-button:nth-child(7) {
     	margin-left: 0px;
-	}
+	}*/
 
 	.slide_box img, .slide_box iframe { width: 300px; height: 130px; }
 
@@ -514,6 +560,25 @@
     	width: 100%;
     }
 
+	.multiple-img-wrapper * {
+	    margin: 0 0 15px;
+	}
+
+	.project-page .next_prev_cont .left .right,
+	.project-page .next_prev_cont .right .left {
+	    display: none;
+	}
+
+	.project-page .next_prev_cont .left .left,
+	.project-page .next_prev_cont .right .right {
+	    font-size: 30px;
+	}
+
+	.browse-thumbs {
+		margin-top: 5px;
+		font-size: 25px;
+	}
+
 }
 
 /* MOBILE
@@ -525,6 +590,15 @@
 	    width: 100%;
 	}
 
+	.page-child #main_cont .project-page .clearfix img.side-by-side {
+		float: none;
+		width: 99.4%;
+	}
+
+	.multiple-img-wrapper * {
+	    margin: 0 0 15px;
+	}
+
 	#commentform input[type=text] {
 		width: 258px;
 	}
@@ -532,6 +606,22 @@
 	.vertical-img {
 	    width: 100%;
 	}
+
+	.project-page .next_prev_cont .left .right,
+	.project-page .next_prev_cont .right .left {
+	    display: none;
+	}
+
+	.project-page .next_prev_cont .left .left,
+	.project-page .next_prev_cont .right .right {
+	    font-size: 30px;
+	}
+
+	.browse-thumbs {
+		margin-top: 5px;
+		font-size: 25px;
+	}
+
 
 	h1 {
 		line-height: 50px;
