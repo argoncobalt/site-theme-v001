@@ -954,10 +954,6 @@ a.more_link:hover {
     height: inherit; 
 }
 
-.single_inside_content iframe { 
-    max-width: 100%; 
-}
-
 h1.single_title,
 h2.single_title { 
     margin-top: 0; 
@@ -1078,6 +1074,17 @@ h1 {
     width: 710px;
 }
 
+iframe.video {
+    width: 1000px;
+    height: 562px;
+}
+
+.caption {
+    margin-bottom: 25px;
+    margin-top: -10px;
+    font-size: 15px;
+}
+
 /* SIDEBAR
 -------------------------------------------------------------- */
 
@@ -1190,17 +1197,20 @@ h3.side_title {
 }
 
 .splash h1 {
-    font-family: 'reflexbold';
+    /*font-family: 'reflexbold';*/
+    font-family: 'GillSansStd';
     font-size: 60px;
     text-align: center;
     color: #5C3E6C;
-    line-height: 80px;
+    /*line-height: 80px;*/
+    line-height: 70px;
     margin: 0 auto;
 }
 
 #splash-left a p,
 #splash-right a p {
-    font-family: 'reflexregular';
+    /*font-family: 'reflexregular';*/
+    font-family: 'GillSansStd-Light';
     font-size: 25px;
 }
 
@@ -1213,7 +1223,8 @@ h3.side_title {
 }
 
 .splash h2 {
-    font-family: 'reflexregular';
+    /*font-family: 'reflexregular';*/
+    font-family: 'GillSansStd';
     font-size: 36px;
     text-align: center;
     color: #5C3E6C;

@@ -159,8 +159,13 @@
 		height: inherit; 
 	}
 
-	.single_inside_content iframe { 
+	/*.single_inside_content iframe { 
 		max-width: 100%; 
+	}*/	
+
+	iframe.video {
+	    width: 710px;
+	    height: 398px;
 	}
 
 	#sidebar { 
@@ -520,8 +525,8 @@
 	}
 
 	.single_inside_content iframe { 
-		width: 300px; 
-		height: 167px; 
+		width: 452px; 
+		height: 254px; 
 	}		
 
 	#sidebar { 
