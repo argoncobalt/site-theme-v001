@@ -90,8 +90,16 @@
 	}
 
 	#contact .social-media {
-		width: 100%;
+		width: 57%;
 	}
+
+    #contact .social-media p.contact-instagram {
+    	margin-left: 0;
+    }
+
+    #contact .social-media p.contact-email {
+    	margin-left: 43px;
+    }
 
 	header .logo-container {
 	    width: 350px;
@@ -225,6 +233,10 @@
 		margin-top: 0;
 	}
 
+	/*.side-by-side.right {
+		margin-bottom: 0;
+	}*/
+
 	.vertical-img {
 	    width: 100%;
 	}
@@ -251,7 +263,7 @@
 	}
 
 	.menu_container {
-		width: 294px;
+		width: 326px;
 		margin-top: 15px;
 	}
 
@@ -311,7 +323,6 @@
 	.anchor{
 	    display: block; 
 	    position: relative; 
-	    top: -200px; 
 	    visibility: hidden;
 	}
 
@@ -612,6 +623,10 @@
 	    width: 100%;
 	}
 
+	/*.side-by-side.right {
+		margin-bottom: 0;
+	}*/
+
 	.project-page .next_prev_cont .left .right,
 	.project-page .next_prev_cont .right .left {
 	    display: none;
@@ -653,11 +668,13 @@
 	}
 
 	.single_inside_content {
-		margin-top: 30px;
+		margin-top: 20px;
 	}
 
 	.splash h1 {
 		font-size: 50px;
+		font-size: 42px;
+		line-height: 54px;
 	}
 
 	#splash-center {
@@ -859,7 +876,8 @@
 		border-top: 1px solid #ddd;
 		font-size: 20px;
 		line-height: 50px;
-		font-family: 'GillSansStd', sans-serif;
+		font-family: 'senregular', sans-serif;
+		text-transform: lowercase;
 	}
 
 	.nav-collapse li:first-child {
@@ -998,7 +1016,6 @@
 	.anchor{
 	    display: block; 
 	    position: relative; 
-	    top: -240px; 
 	    visibility: hidden;
 	}
 
@@ -1022,7 +1039,7 @@
 		margin: 0 auto;
 		margin-top: 15px;
 		line-height: 28px;
-		font-size: 20px;
+		font-size: 18px;
 	}
 
 	.thumb-overlay {
@@ -1099,7 +1116,7 @@
 	.single_inside_content iframe { width: 300px; height: 167px; }
 
 	.about-nav p {
-		margin-left: 30px;
+		margin-left: 26px;
 	}
 
 	.about-nav {
@@ -1127,7 +1144,10 @@
 
 	#content.blog {
 		float: none;
-		margin-top: 30px;
+	}
+
+	.js .nav-collapse.opened {
+		width: 100%;
 	}
 
 }
@@ -1138,7 +1158,7 @@
 @media only screen and (max-height: 720px) {
 	#splash-center {
 	    margin-top: 50px;
-	    top: 0;
+	    top: 22px;
 	}
 
 	#splash-left {
@@ -1165,8 +1185,8 @@
 @media only screen and (max-width: 768px) {
 
 	#splash-center {
-		height: 670px;
-		margin-top: -335px;
+		height: 615px;
+		margin-top: -324px;
 	}
 
 	.robot-sprite {
@@ -1195,7 +1215,7 @@
 		height: 30px;
 		margin-right: 0;
 		right: 0;
-		width: 180px;
+		width: 183px;
 		left: 0;
 		margin-top: 0px;
 	}
@@ -1214,12 +1234,13 @@
 		position: absolute;
 		margin-left: -151px;
 		left: 50%;
-		height: 480px;
+		height: 386px;
 		top: 50%;
 	}
 
 	.splash h2 {
 		margin-top: 100px;
+		font-size: 30px;
 	}
 }
 
@@ -1239,7 +1260,7 @@
 @media only screen and (min-width: 500px) and (max-width: 767px) and (max-height:720px) { 
 
 	#nav-container {
-		top: 625px;
+		top: 565px;
 		margin-top: 0px;
 		height: 30px;
 	}
@@ -1250,13 +1271,21 @@
 	#nav-container {
 		height: 30px;
 	}
+	
+	#splash-center {
+		margin-top: -277px;
+	}
+
+	#nav-container {
+		height: 20px;
+	}
 }
 
 @media only screen and (max-width: 499px) and (max-height:720px) {
 
 	#nav-container {
 		margin-top: 0px;
-		top: 575px;
+		top: 520px;
 		height: 30px;
 	}
 
