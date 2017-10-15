@@ -26,10 +26,10 @@
 		</SCRIPT> 
 		</div><!--//copyright_text-->
 
-		<div class="social-media">
+		<div class="contact-handles">
 			<a href="https://www.facebook.com/arielcott0n"target="blank"><i class="fa fa-facebook-official fa-lg"></i></a>
-			<a href="https://instagram.com/argoncobalt/"target="blank"><i class="fa fa-instagram fa-lg"></i></a>
-			<a href="https://twitter.com/argoncobalt"target="blank"><i class="fa fa-twitter fa-lg"></i></a>
+			<a href="https://instagram.com/argoncobalt/"target="blank"><i class="fa fa-ig fa-lg"></i></a>
+			<a href="https://twitter.com/argoncobalt"target="blank"><i class="fa fa-tw fa-lg"></i></a>
 			<a href="https://github.com/argoncobalt"target="blank"><i class="fa fa-github-alt fa-lg"></i></a>
 		</div><!--//footer_box-->
 		

@@ -85,19 +85,19 @@
 		width: 708px;  
 	}
 
-	#contact .social-media p {
+	#contact .contact-handles p {
 		margin-left: 26px;
 	}
 
-	#contact .social-media {
+	#contact .contact-handles {
 		width: 57%;
 	}
 
-    #contact .social-media p.contact-instagram {
+    #contact .contact-handles p.contact-ig {
     	margin-left: 0;
     }
 
-    #contact .social-media p.contact-email {
+    #contact .contact-handles p.contact-email {
     	margin-left: 43px;
     }
 
@@ -287,16 +287,16 @@
 		float: none;
 	}
 
-	#contact .social-media {
+	#contact .contact-handles {
 		width: 100%;
 		margin-bottom: 20px;
 	}
 
-	/*#contact .social-media p:nth-child(4) {
+	/*#contact .contact-handles p:nth-child(4) {
 		margin-left: 98px;
 	}*/
 
-	#contact .social-media p {
+	#contact .contact-handles p {
 		margin-top: 10px;
 		margin-bottom: 10px;
 		float: none;
@@ -905,12 +905,12 @@
 		display: none;
 	}
 
-	#contact .social-media p {
+	#contact .contact-handles p {
 		float: none;
 		margin-left: 0;
 	}
 
-	#contact .social-media {
+	#contact .contact-handles {
 		width: auto;
 	}
 

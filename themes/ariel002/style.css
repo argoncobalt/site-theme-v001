@@ -881,17 +881,17 @@ h3.side_title {
     text-align: center;
 } 
 
-#footer .social-media {
+#footer .contact-handles {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-#footer .social-media .fa {
+#footer .contact-handles .fa {
     margin-right: 10px;
 }
 
-#footer .social-media .fa-github-alt {
+#footer .contact-handles .fa-github-alt {
     margin-right: 0;
 }
 
@@ -1165,17 +1165,17 @@ img#gear8 {
     margin-right: 5px;
 }
 
-#contact .social-media {
+#contact .contact-handles {
     margin: 0 auto;
     width: 819px;
 }
 
-#contact .social-media p {
+#contact .contact-handles p {
     float: left;
     margin-left: 40px;
 }
 
-#contact .social-media p:first-child {
+#contact .contact-handles p:first-child {
     margin-left: 0;
 }
 
