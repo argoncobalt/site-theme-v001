@@ -1542,6 +1542,10 @@ article + [data-readmore-toggle], article[data-readmore] {
     margin: 30px 0;
 }
 
+.page-child.parent-pageid-13 h3 {
+    padding-top: 20px;
+}
+
 /* SHOP
 -------------------------------------------------------------- */
 
