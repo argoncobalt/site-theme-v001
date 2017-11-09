@@ -9,13 +9,13 @@
 	<!--[if lt IE 9]>
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->              		
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=1" type="text/css" media="screen" title="no title" charset="utf-8"/>
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/mobile.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/scrollTop.css" type="text/css" charset="utf-8"/>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/responsive-nav.css" type="text/css" charset="utf-8"/>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/mobile.css?v=1" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/scrollTop.css?v=1" type="text/css" charset="utf-8"/>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/responsive-nav.css?v=1" type="text/css" charset="utf-8"/>
 	<link rel="stylesheet" href="http://www.argoncobalt.com/wp-content/themes/ariel002/font-awesome.css" type="text/css" charset="utf-8"/>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

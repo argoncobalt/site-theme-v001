@@ -19,6 +19,14 @@
     	width: 1200px; 
 	}
 
+	.mehr-als-1023 {
+	    display: block;
+	}
+
+	.wenig-als-1023 {
+	    display: none;
+	}
+
 }
 
 /* LARGE DESKTOP BROWSER
@@ -40,6 +48,14 @@
 
 	.home_wide_box {
 		width: 810px;
+	}
+
+	.mehr-als-1023 {
+	    display: block;
+	}
+
+	.wenig-als-1023 {
+	    display: none;
 	}
 
 }
@@ -208,6 +224,14 @@
 	#commentform textarea {
     	width: 430px;
     }
+
+	.mehr-als-1023 {
+	    display: none;
+	}
+
+	.wenig-als-1023 {
+	    display: block;
+	}
 
 }
 
@@ -593,6 +617,14 @@
 	.browse-thumbs {
 		margin-top: 5px;
 		font-size: 25px;
+	}
+
+	.mehr-als-1023 {
+	    display: none;
+	}
+
+	.wenig-als-1023 {
+	    display: block;
 	}
 
 }
@@ -1148,6 +1180,14 @@
 
 	.js .nav-collapse.opened {
 		width: 100%;
+	}
+
+	.mehr-als-1023 {
+	    display: none;
+	}
+
+	.wenig-als-1023 {
+	    display: block;
 	}
 
 }

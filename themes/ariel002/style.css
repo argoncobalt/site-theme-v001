@@ -805,6 +805,15 @@ iframe.video {
     font-size: 15px;
 }
 
+.mehr-als-1023 {
+    display: block;
+}
+
+.wenig-als-1023 {
+    display: none;
+}
+
+
 /* SIDEBAR
 -------------------------------------------------------------- */
 
@@ -1527,6 +1536,10 @@ article + [data-readmore-toggle], article[data-readmore] {
 
 .thumb-container.mobile {
     display: none;
+}
+
+.page-child.parent-pageid-13 .center {
+    margin: 30px 0;
 }
 
 /* SHOP
